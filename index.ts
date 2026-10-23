@@ -104,8 +104,8 @@ export interface ClientSettings {
 }
 
 export interface LibraryEntry {
-  mediaID: number
-  episode: number
+  mediaID?: number
+  episode?: number
   files: number
   hash: string
   progress: number
