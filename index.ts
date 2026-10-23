@@ -174,6 +174,8 @@ export interface Native {
   removeBackgroundTorrents: (hashes: string[]) => Promise<void>
   rescanTorrents: (hashes: string[]) => Promise<void>
   library: () => Promise<LibraryEntry[]>
+  qbittorrentLibrary: () => Promise<LibraryEntry[]>
+  importQBittorrent: (torrents: Array<Pick<LibraryEntry, 'hash' | 'mediaID' | 'episode'>>, move: boolean) => Promise<string[]>
   attachments: (hash: string, id: number) => Promise<Attachment[]>
   tracks: (hash: string, id: number) => Promise<SubtitleTrack[]>
   subtitles: (hash: string, id: number, cb: (subtitle: { text: string, time: number, duration: number }, trackNumber: number) => void) => Promise<void>
